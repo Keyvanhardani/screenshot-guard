@@ -1,7 +1,7 @@
 """Azure secret patterns."""
 
 import re
-from exposure_sentinel.patterns.base import SecretPattern
+from screenshot_guard.patterns.base import SecretPattern
 
 AZURE_PATTERNS = [
     SecretPattern(

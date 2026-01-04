@@ -1,7 +1,7 @@
 """AWS secret patterns."""
 
 import re
-from exposure_sentinel.patterns.base import SecretPattern
+from screenshot_guard.patterns.base import SecretPattern
 
 AWS_PATTERNS = [
     SecretPattern(

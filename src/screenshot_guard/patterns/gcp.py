@@ -1,7 +1,7 @@
 """Google Cloud Platform secret patterns."""
 
 import re
-from exposure_sentinel.patterns.base import SecretPattern
+from screenshot_guard.patterns.base import SecretPattern
 
 GCP_PATTERNS = [
     SecretPattern(

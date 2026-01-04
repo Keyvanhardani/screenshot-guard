@@ -1,7 +1,7 @@
 """Generic secret patterns for common credentials."""
 
 import re
-from exposure_sentinel.patterns.base import SecretPattern
+from screenshot_guard.patterns.base import SecretPattern
 
 GENERIC_PATTERNS = [
     # API Keys (generic)

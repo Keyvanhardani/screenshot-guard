@@ -9,8 +9,6 @@ import click
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
-from rich.progress import Progress, SpinnerColumn, TextColumn
-
 from screenshot_guard import __version__
 from screenshot_guard.scanner import Scanner
 from screenshot_guard.detector import SecretDetector, Finding
@@ -100,15 +98,10 @@ def scan(
 
     scanner = Scanner(detector=detector, ocr_engine=ocr_engine)
 
-    # Run scan with progress
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        console=console,
-    ) as progress:
-        task = progress.add_task("Scanning...", total=None)
-        findings = scanner.scan(path_obj)
-        progress.update(task, completed=True)
+    # Run scan
+    console.print("[dim]Scanning...[/dim]")
+    findings = scanner.scan(path_obj)
+    console.print("[dim]Scan complete.[/dim]")
 
     # Filter by severity if needed
     if severity != "all":
