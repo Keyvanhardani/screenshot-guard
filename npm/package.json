@@ -1,0 +1,31 @@
+{
+  "name": "screenshot-guard",
+  "version": "0.1.0",
+  "description": "Secret scanner with OCR superpowers - finds secrets in code AND screenshots",
+  "bin": {
+    "screenshot-guard": "./cli.js"
+  },
+  "scripts": {
+    "postinstall": "node postinstall.js"
+  },
+  "keywords": [
+    "security",
+    "secrets",
+    "scanner",
+    "ocr",
+    "screenshot",
+    "devops",
+    "ci",
+    "pre-commit"
+  ],
+  "author": "Keyvan Hardani",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keyvanhardani/screenshot-guard.git"
+  },
+  "homepage": "https://github.com/Keyvanhardani/screenshot-guard",
+  "engines": {
+    "node": ">=16"
+  }
+}
