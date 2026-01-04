@@ -1,0 +1,43 @@
+# Python stuff
+*.py
+*.pyc
+__pycache__/
+*.egg-info/
+dist/*.whl
+dist/*.tar.gz
+build/
+*.egg
+.eggs/
+
+# Source
+src/
+src-ts/
+tests/
+
+# Config
+.github/
+.pre-commit-config.yaml
+.screenshotguardignore.example
+pyproject.toml
+pytest.ini
+.ruff.toml
+.mypy.ini
+
+# Dev
+.git/
+.gitignore
+.venv/
+venv/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Docs
+docs/
+*.md
+!README.md
+
+# Action
+action/
