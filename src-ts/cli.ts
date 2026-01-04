@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-const { spawn } = require('child_process');
-const path = require('path');
+import { spawn } from 'child_process';
 
 const args = process.argv.slice(2);
 
-// Try to use the Python package
 const proc = spawn('screenshot-guard', args, {
   stdio: 'inherit',
   shell: true
@@ -12,7 +10,7 @@ const proc = spawn('screenshot-guard', args, {
 
 proc.on('error', () => {
   console.error('Error: screenshot-guard Python package not found.');
-  console.error('Install it with: pip install screenshot-guard');
+  console.error('Install with: pip install screenshot-guard');
   process.exit(1);
 });
 

@@ -1,0 +1,50 @@
+{
+  "name": "screenshot-guard",
+  "version": "0.1.0",
+  "description": "Secret scanner with OCR superpowers - finds secrets in code AND screenshots",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "screenshot-guard-js": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "keywords": [
+    "security",
+    "secrets",
+    "scanner",
+    "ocr",
+    "screenshot",
+    "devops",
+    "ci",
+    "pre-commit",
+    "aws",
+    "azure",
+    "gcp",
+    "github"
+  ],
+  "author": "Screenshot Guard Contributors",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keyvanhardani/screenshot-guard.git"
+  },
+  "homepage": "https://github.com/Keyvanhardani/screenshot-guard",
+  "bugs": {
+    "url": "https://github.com/Keyvanhardani/screenshot-guard/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "dist",
+    "scripts"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
