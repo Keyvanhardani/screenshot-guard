@@ -4,6 +4,14 @@
 
 > The first secret scanner that finds secrets in code AND screenshots.
 
+<p align="center">
+  <a href="https://github.com/Keyvanhardani/german-ocr">
+    <img src="https://github.com/Keyvanhardani/german-ocr/raw/main/docs/icon.png" alt="Powered by german-ocr" width="120">
+  </a>
+  <br>
+  <em>Powered by <a href="https://github.com/Keyvanhardani/german-ocr">german-ocr</a></em>
+</p>
+
 [![PyPI version](https://badge.fury.io/py/screenshot-guard.svg)](https://badge.fury.io/py/screenshot-guard)
 [![npm version](https://badge.fury.io/js/screenshot-guard.svg)](https://badge.fury.io/js/screenshot-guard)
 [![Packagist](https://img.shields.io/packagist/v/keyvan/screenshot-guard)](https://packagist.org/packages/keyvan/screenshot-guard)
