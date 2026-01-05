@@ -1,36 +1,51 @@
-# Screenshot Guard
-
-**Secret Scanner with OCR Superpowers**
-
-> The first secret scanner that finds secrets in code AND screenshots.
-
 <p align="center">
-  <a href="https://github.com/Keyvanhardani/german-ocr">
-    <img src="https://github.com/Keyvanhardani/german-ocr/raw/main/docs/icon.png" alt="Powered by german-ocr" width="120">
-  </a>
-  <br>
-  <em>Powered by <a href="https://github.com/Keyvanhardani/german-ocr">german-ocr</a></em>
+  <img src="https://github.com/Keyvanhardani/german-ocr/raw/main/docs/icon.png" alt="Screenshot Guard" width="150"/>
 </p>
 
-[![PyPI version](https://badge.fury.io/py/screenshot-guard.svg)](https://badge.fury.io/py/screenshot-guard)
-[![npm version](https://badge.fury.io/js/screenshot-guard.svg)](https://badge.fury.io/js/screenshot-guard)
-[![Packagist](https://img.shields.io/packagist/v/keyvan/screenshot-guard)](https://packagist.org/packages/keyvan/screenshot-guard)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+<h1 align="center">Screenshot Guard</h1>
 
-## The Problem
+<p align="center">
+  <strong>🔐 Secret Scanner with OCR Superpowers</strong>
+</p>
+
+<p align="center">
+  <em>The first secret scanner that finds secrets in code AND screenshots.</em>
+</p>
+
+<p align="center">
+  <a href="https://pypi.org/project/screenshot-guard/"><img src="https://badge.fury.io/py/screenshot-guard.svg" alt="PyPI version"></a>
+  <a href="https://www.npmjs.com/package/screenshot-guard"><img src="https://badge.fury.io/js/screenshot-guard.svg" alt="npm version"></a>
+  <a href="https://packagist.org/packages/keyvan/screenshot-guard"><img src="https://img.shields.io/packagist/v/keyvan/screenshot-guard" alt="Packagist"></a>
+  <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Keyvanhardani/german-ocr"><img src="https://img.shields.io/badge/Powered%20by-german--ocr-orange" alt="Powered by german-ocr"></a>
+  <img src="https://img.shields.io/badge/50+-Secret%20Patterns-red" alt="50+ Patterns">
+  <img src="https://img.shields.io/badge/OCR-Screenshots-green" alt="OCR Screenshots">
+</p>
+
+---
+
+## 🚨 The Problem
 
 Developers take screenshots. Screenshots of terminals, dashboards, documentation.
 
 And sometimes those screenshots contain secrets:
-- AWS keys in terminal output
-- API tokens in dashboard screenshots
-- "Example" credentials that are actually real
+
+| 😱 Scenario | 💸 Impact |
+|-------------|-----------|
+| AWS keys in terminal output | $47,000 cloud bill |
+| API tokens in dashboard screenshots | Data breach |
+| "Example" credentials that are actually real | Account compromise |
 
 **Regular secret scanners miss all of this.**
 
-## The Solution
+---
 
-Screenshot Guard scans your code AND your images using OCR powered by [german-ocr](https://github.com/Keyvanhardani/german-ocr).
+## 💡 The Solution
+
+Screenshot Guard scans your code **AND** your images using OCR.
 
 ```bash
 # Install
@@ -40,29 +55,61 @@ pip install screenshot-guard[ocr]
 screenshot-guard scan ./your-project
 ```
 
-## Features
+<p align="center">
+  <img src="https://img.shields.io/badge/Text%20Files-✓-brightgreen" alt="Text Files">
+  <img src="https://img.shields.io/badge/PNG-✓-brightgreen" alt="PNG">
+  <img src="https://img.shields.io/badge/JPG-✓-brightgreen" alt="JPG">
+  <img src="https://img.shields.io/badge/GIF-✓-brightgreen" alt="GIF">
+  <img src="https://img.shields.io/badge/WebP-✓-brightgreen" alt="WebP">
+  <img src="https://img.shields.io/badge/BMP-✓-brightgreen" alt="BMP">
+</p>
 
-- **OCR-powered** - Finds secrets in PNG, JPG, GIF, BMP, WebP images
-- **50+ patterns** - AWS, Azure, GCP, GitHub, Stripe, Slack, and more
-- **Local processing** - No cloud, no data leaves your machine
-- **GitHub Action** - Easy CI/CD integration with SARIF support
-- **Pre-commit hook** - Catch secrets before they're committed
+---
 
-## Quick Start
+## ✨ Features
 
-### Installation
+| Feature | Description |
+|---------|-------------|
+| 🔍 **OCR-powered** | Finds secrets in PNG, JPG, GIF, BMP, WebP images |
+| 🎯 **50+ patterns** | AWS, Azure, GCP, GitHub, Stripe, Slack, and more |
+| 🏠 **Local processing** | No cloud, no data leaves your machine |
+| 🤖 **GitHub Action** | Easy CI/CD integration with SARIF support |
+| 🪝 **Pre-commit hook** | Catch secrets before they're committed |
 
-**Python (pip)**
+---
+
+## 📦 Installation
+
+<table>
+<tr>
+<td>
+
+### 🐍 Python
 ```bash
-# Basic (no OCR)
-pip install screenshot-guard
-
-# With OCR support (recommended)
 pip install screenshot-guard[ocr]
-
-# With Ollama backend
-pip install screenshot-guard[ollama]
 ```
+
+</td>
+<td>
+
+### 📦 Node.js
+```bash
+npm install screenshot-guard
+```
+
+</td>
+<td>
+
+### 🐘 PHP
+```bash
+composer require keyvan/screenshot-guard
+```
+
+</td>
+</tr>
+</table>
+
+### Python Installation Options
 
 | Command | What's installed |
 |---------|------------------|
@@ -70,19 +117,13 @@ pip install screenshot-guard[ollama]
 | `pip install screenshot-guard[ocr]` | + [german-ocr](https://github.com/Keyvanhardani/german-ocr) with llama.cpp |
 | `pip install screenshot-guard[ollama]` | + german-ocr with Ollama backend |
 
-> **Note:** You don't need to install german-ocr separately - it comes automatically with `[ocr]`!
+> 💡 **Note:** You don't need to install german-ocr separately - it comes automatically with `[ocr]`!
 
-**Node.js (npm)**
-```bash
-npm install screenshot-guard
-```
+---
 
-**PHP (Composer)**
-```bash
-composer require keyvan/screenshot-guard
-```
+## ⚡ Quick Start
 
-### CLI Usage
+### 💻 CLI Usage
 
 ```bash
 # Scan current directory
@@ -101,7 +142,7 @@ screenshot-guard scan . --no-ocr
 screenshot-guard scan . --backend ollama
 ```
 
-### GitHub Action
+### 🤖 GitHub Action
 
 ```yaml
 name: Security Scan
@@ -123,37 +164,40 @@ jobs:
           fail-on-findings: 'true'
 ```
 
-### Pre-commit Hook
+### 🪝 Pre-commit Hook
 
 ```yaml
 # .pre-commit-config.yaml
 repos:
   - repo: https://github.com/Keyvanhardani/screenshot-guard
-    rev: v1.0.0
+    rev: v0.1.0
     hooks:
       - id: screenshot-guard
-        args: ['--severity', 'high', '--no-ocr']  # OCR in pre-commit is slow
+        args: ['--severity', 'high', '--no-ocr']
 ```
 
-## Supported Patterns
+---
+
+## 🎯 Supported Patterns
 
 | Provider | Patterns | Examples |
-|----------|----------|----------|
-| AWS | 5 | Access Keys, Secret Keys, Session Tokens |
-| Azure | 5 | Storage Keys, Connection Strings, SAS Tokens |
-| GCP | 5 | API Keys, Service Accounts, OAuth Secrets |
-| GitHub | 6 | PATs, OAuth Tokens, App Private Keys |
-| Generic | 15+ | Passwords, Private Keys, JWTs, Database URLs |
-| Slack | 2 | Bot Tokens, Webhooks |
-| Stripe | 2 | Secret Keys, Restricted Keys |
-| And more... | | |
+|----------|:--------:|----------|
+| <img src="https://img.shields.io/badge/AWS-FF9900?logo=amazonaws&logoColor=white" alt="AWS"> | 5 | Access Keys, Secret Keys, Session Tokens |
+| <img src="https://img.shields.io/badge/Azure-0078D4?logo=microsoftazure&logoColor=white" alt="Azure"> | 5 | Storage Keys, Connection Strings, SAS Tokens |
+| <img src="https://img.shields.io/badge/GCP-4285F4?logo=googlecloud&logoColor=white" alt="GCP"> | 5 | API Keys, Service Accounts, OAuth Secrets |
+| <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub"> | 6 | PATs, OAuth Tokens, App Private Keys |
+| <img src="https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white" alt="Slack"> | 2 | Bot Tokens, Webhooks |
+| <img src="https://img.shields.io/badge/Stripe-008CDD?logo=stripe&logoColor=white" alt="Stripe"> | 2 | Secret Keys, Restricted Keys |
+| 🔐 Generic | 15+ | Passwords, Private Keys, JWTs, Database URLs |
 
 ```bash
 # List all patterns
 screenshot-guard patterns
 ```
 
-## Output Formats
+---
+
+## 📊 Output Formats
 
 ### Table (default)
 ```
@@ -165,30 +209,35 @@ screenshot-guard patterns
 └──────────────────┴──────┴────────────────────┴──────────┴────────┘
 ```
 
-### JSON
-```bash
-screenshot-guard scan . --format json --output report.json
-```
+### Export Options
 
-### SARIF (GitHub Security)
-```bash
-screenshot-guard scan . --format sarif --output results.sarif
-```
+| Format | Command | Use Case |
+|--------|---------|----------|
+| 📋 JSON | `--format json` | CI/CD pipelines |
+| 🔒 SARIF | `--format sarif` | GitHub Security |
+| 📝 Markdown | `--format markdown` | Documentation |
 
-### Markdown
-```bash
-screenshot-guard scan . --format markdown --output report.md
-```
+---
 
-## OCR Backends
+## 🔧 OCR Backends
 
-Screenshot Guard uses [german-ocr](https://github.com/Keyvanhardani/german-ocr) for image analysis:
+<p align="center">
+  <a href="https://github.com/ggerganov/llama.cpp">
+    <img src="https://img.shields.io/badge/llama.cpp-GGUF-orange" alt="llama.cpp">
+  </a>
+  <a href="https://ollama.com">
+    <img src="https://img.shields.io/badge/🦙%20Ollama-Local-blue" alt="Ollama">
+  </a>
+  <a href="https://german-ocr.de">
+    <img src="https://img.shields.io/badge/☁️%20Cloud-API-green" alt="Cloud">
+  </a>
+</p>
 
 | Backend | Speed | Setup | GPU |
 |---------|-------|-------|-----|
-| `llamacpp` | Fast | `pip install screenshot-guard[ocr]` | Optional |
-| `ollama` | Fast | Requires Ollama | Optional |
-| `cloud` | Fastest | API key required | N/A |
+| `llamacpp` | ⚡ Fast | `pip install screenshot-guard[ocr]` | Optional |
+| `ollama` | ⚡ Fast | Requires Ollama | Optional |
+| `cloud` | ⚡⚡ Fastest | API key required | N/A |
 
 ```bash
 # Use specific backend
@@ -196,24 +245,12 @@ screenshot-guard scan . --backend llamacpp
 screenshot-guard scan . --backend ollama
 ```
 
-## Ignoring Files
+---
 
-Create `.screenshotguardignore` in your project root:
+## 🔌 API Usage
 
-```gitignore
-# Ignore test fixtures
-tests/fixtures/*
-
-# Ignore vendor
-vendor/
-
-# Ignore specific files
-docs/example-config.yaml
-```
-
-## API Usage
-
-### Python
+<details>
+<summary><b>🐍 Python</b></summary>
 
 ```python
 from screenshot_guard import Scanner, SecretDetector, OCREngine
@@ -232,7 +269,10 @@ for finding in findings:
     print(f"  From OCR: {finding.from_ocr}")
 ```
 
-### Node.js
+</details>
+
+<details>
+<summary><b>📦 Node.js</b></summary>
 
 ```javascript
 const { scan } = require('screenshot-guard');
@@ -250,7 +290,10 @@ findings.forEach(finding => {
 });
 ```
 
-### PHP
+</details>
+
+<details>
+<summary><b>🐘 PHP</b></summary>
 
 ```php
 use ScreenshotGuard\Client;
@@ -265,37 +308,67 @@ foreach ($findings as $finding) {
 }
 ```
 
-## Why OCR?
-
-Real examples where OCR would have helped:
-
-1. **Terminal screenshot committed to docs**
-   - AWS Access Key visible in output
-   - Cost: $47,000 cloud bill
-
-2. **Dashboard screenshot in README**
-   - "Example" API key was actually real
-   - Exposed for 2 months
-
-3. **Slack screenshot in GitHub issue**
-   - GitHub token visible in chat
-   - Repository compromised
-
-## Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
-Apache 2.0 - see [LICENSE](LICENSE)
-
-## Author
-
-**Keyvan Hardani**
-- Website: [keyvan.ai](https://keyvan.ai)
-- GitHub: [@Keyvanhardani](https://github.com/Keyvanhardani)
-- HuggingFace: [Keyven](https://huggingface.co/Keyven)
+</details>
 
 ---
 
-If this tool helped you, please star the repo!
+## 🙈 Ignoring Files
+
+Create `.screenshotguardignore` in your project root:
+
+```gitignore
+# Ignore test fixtures
+tests/fixtures/*
+
+# Ignore vendor
+vendor/
+
+# Ignore specific files
+docs/example-config.yaml
+```
+
+---
+
+## 😱 Why OCR?
+
+Real examples where OCR would have helped:
+
+| Incident | Secret Exposed | Cost |
+|----------|---------------|------|
+| 📸 Terminal screenshot in docs | AWS Access Key | **$47,000** cloud bill |
+| 📊 Dashboard screenshot in README | "Example" API key (was real) | 2 months exposed |
+| 💬 Slack screenshot in GitHub issue | GitHub token | Repository compromised |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## 📄 License
+
+Apache 2.0 - see [LICENSE](LICENSE)
+
+---
+
+## 👤 Author
+
+**Keyvan Hardani**
+
+<p>
+  <a href="https://keyvan.ai"><img src="https://img.shields.io/badge/Website-keyvan.ai-blue" alt="Website"></a>
+  <a href="https://github.com/Keyvanhardani"><img src="https://img.shields.io/badge/GitHub-@Keyvanhardani-181717?logo=github" alt="GitHub"></a>
+  <a href="https://huggingface.co/Keyven"><img src="https://img.shields.io/badge/🤗%20HuggingFace-Keyven-yellow" alt="HuggingFace"></a>
+</p>
+
+---
+
+<p align="center">
+  Made with ❤️ for security
+</p>
+
+<p align="center">
+  <a href="https://github.com/Keyvanhardani/screenshot-guard">⭐ Star us on GitHub!</a>
+</p>
