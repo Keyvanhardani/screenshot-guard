@@ -10,7 +10,7 @@
 
 <p align="center">
   <em>The first secret scanner that finds secrets in code AND screenshots.</em>
-  <br>
+  <br><br>
   <a href="https://github.com/Keyvanhardani/german-ocr"><img src="docs/german-ocr-icon.png" alt="german-ocr" width="80"/></a>
    <br>
   <sub>Powered by <a href="https://github.com/Keyvanhardani/german-ocr">german-ocr</a></sub>
