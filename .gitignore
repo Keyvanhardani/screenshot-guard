@@ -78,6 +78,10 @@ dmypy.json
 .DS_Store
 Thumbs.db
 
+# Node
+node_modules/
+package-lock.json
+
 # Project specific
 *.sarif
 *.gguf
