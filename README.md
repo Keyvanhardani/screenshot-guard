@@ -5,6 +5,8 @@
 > The first secret scanner that finds secrets in code AND screenshots.
 
 [![PyPI version](https://badge.fury.io/py/screenshot-guard.svg)](https://badge.fury.io/py/screenshot-guard)
+[![npm version](https://badge.fury.io/js/screenshot-guard.svg)](https://badge.fury.io/js/screenshot-guard)
+[![Packagist](https://img.shields.io/packagist/v/keyvan/screenshot-guard)](https://packagist.org/packages/keyvan/screenshot-guard)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 ## The Problem
@@ -42,12 +44,34 @@ screenshot-guard scan ./your-project
 
 ### Installation
 
+**Python (pip)**
 ```bash
 # Basic (no OCR)
 pip install screenshot-guard
 
 # With OCR support (recommended)
 pip install screenshot-guard[ocr]
+
+# With Ollama backend
+pip install screenshot-guard[ollama]
+```
+
+| Command | What's installed |
+|---------|------------------|
+| `pip install screenshot-guard` | Text scanning only (no OCR) |
+| `pip install screenshot-guard[ocr]` | + [german-ocr](https://github.com/Keyvanhardani/german-ocr) with llama.cpp |
+| `pip install screenshot-guard[ollama]` | + german-ocr with Ollama backend |
+
+> **Note:** You don't need to install german-ocr separately - it comes automatically with `[ocr]`!
+
+**Node.js (npm)**
+```bash
+npm install screenshot-guard
+```
+
+**PHP (Composer)**
+```bash
+composer require keyvan/screenshot-guard
 ```
 
 ### CLI Usage
@@ -181,6 +205,8 @@ docs/example-config.yaml
 
 ## API Usage
 
+### Python
+
 ```python
 from screenshot_guard import Scanner, SecretDetector, OCREngine
 
@@ -196,6 +222,39 @@ for finding in findings:
     print(f"{finding.file_path}:{finding.line_number} - {finding.pattern_name}")
     print(f"  Severity: {finding.severity}")
     print(f"  From OCR: {finding.from_ocr}")
+```
+
+### Node.js
+
+```javascript
+const { scan } = require('screenshot-guard');
+
+// Scan a directory
+const findings = await scan({
+  path: './your-project',
+  severity: 'high',
+  ocr: true
+});
+
+findings.forEach(finding => {
+  console.log(`${finding.file}:${finding.line} - ${finding.type}`);
+  console.log(`  Severity: ${finding.severity}`);
+});
+```
+
+### PHP
+
+```php
+use ScreenshotGuard\Client;
+
+$guard = new Client();
+$findings = $guard->scan('./your-project', [
+    'severity' => 'high'
+]);
+
+foreach ($findings as $finding) {
+    echo "{$finding['file_path']}:{$finding['line_number']} - {$finding['pattern_name']}\n";
+}
 ```
 
 ## Why OCR?
