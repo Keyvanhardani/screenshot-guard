@@ -1,9 +1,5 @@
 <p align="center">
-  <img src="docs/logo.png" alt="Screenshot Guard" width="180"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/Keyvanhardani/german-ocr">
-    <img src="docs/german-ocr-icon.png" alt="german-ocr" width="80"/>
-  </a>
+  <img src="docs/logo.png" alt="Screenshot Guard" width="200"/>
 </p>
 
 <h1 align="center">Screenshot Guard</h1>
@@ -15,6 +11,8 @@
 <p align="center">
   <em>The first secret scanner that finds secrets in code AND screenshots.</em>
   <br>
+  <a href="https://github.com/Keyvanhardani/german-ocr"><img src="docs/german-ocr-icon.png" alt="german-ocr" width="80"/></a>
+   <br>
   <sub>Powered by <a href="https://github.com/Keyvanhardani/german-ocr">german-ocr</a></sub>
 </p>
 
