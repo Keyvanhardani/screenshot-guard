@@ -1,0 +1,51 @@
+{
+    "name": "keyvan/screenshot-guard",
+    "description": "Secret scanner with OCR superpowers - finds secrets in code AND screenshots",
+    "version": "0.1.0",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Keyvan.ai",
+            "email": "support@keyvan.ai",
+            "homepage": "https://keyvan.ai"
+        }
+    ],
+    "homepage": "https://github.com/Keyvanhardani/screenshot-guard",
+    "keywords": [
+        "security",
+        "secrets",
+        "scanner",
+        "ocr",
+        "screenshot",
+        "devops",
+        "ci",
+        "pre-commit",
+        "aws",
+        "azure",
+        "gcp",
+        "github"
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ScreenshotGuard\\": "composer/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ScreenshotGuard\\Tests\\": "composer/tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
