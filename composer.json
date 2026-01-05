@@ -1,7 +1,6 @@
 {
     "name": "keyvan/screenshot-guard",
     "description": "Secret scanner with OCR superpowers - finds secrets in code AND screenshots",
-    "version": "0.1.0",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
